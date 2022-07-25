@@ -42,17 +42,17 @@ console.log(countEt(lorem))
 // bonus 2
 
 function palindrom (str) {
-    let reverseString= str.toUpperCase().split('').reverse().filter(word => word !==' ')
-        splitStr = str.toUpperCase().split('').filter(word => word !==' ');
+    let reverseString= str.toUpperCase().split('').reverse().filter(word => word !==' ' && word !=='!' && word !==('?') && word !==('¿') &&word!==('¡') && word!==('.') && word!==(`'`) && word!==(`"`))
+        splitStr = str.toUpperCase().split('').filter(word => word !==' '&& word !=='!' && word !==('?') && word !==('¿') &&word!==('¡') && word!==('.') && word!==(`'`) && word!==(`"`));
     
         console.log(reverseString)
         console.log(splitStr)
-    if (reverseString === splitStr){
-        return `it is a palindrom`
+    if (reverseString.join('') == splitStr.join('')){
+        return `Gratz! it is a palindrom`
     }else{
         return `Sorry not sorry, this is not a palindrom`
     }
     
   }
 
-  console.log(palindrom('Was it a car or a cat I saw'))
+  console.log(palindrom(`No 'x' in Nixon`))
